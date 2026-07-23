@@ -1,0 +1,110 @@
+.contact {
+  font-family: var(--font-sans);
+  background-color: var(--color-neutral);
+  padding: 80px 0;
+}
+
+.contact__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.contact__title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.contact__title-accent {
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+  background-color: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.contact__subtitle {
+  margin-top: 12px;
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+}
+
+.contact__grid {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.contact__card {
+  flex: 0 1 280px;
+  padding: 32px 24px;
+  border-radius: 12px;
+  background-color: var(--color-neutral);
+  border: 1px solid var(--color-neutral);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px var(--color-shadow);
+}
+
+.contact__card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  background-color: var(--color-secondary-translucent);
+  color: var(--color-secondary);
+}
+
+.contact__card-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.contact__card-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+}
+
+.contact__card-text {
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.contact__card-text a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact__card-text a:hover {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding: 48px 0;
+  }
+
+  .contact__grid {
+    gap: 24px;
+  }
+
+  .contact__card {
+    flex-basis: 100%;
+  }
+}
