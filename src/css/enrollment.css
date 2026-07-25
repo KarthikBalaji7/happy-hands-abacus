@@ -170,6 +170,50 @@
   margin-top: 2px;
 }
 
+.enrollment__toggle-group {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--color-neutral);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.enrollment__toggle {
+  flex: 1;
+  cursor: pointer;
+}
+
+.enrollment__toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.enrollment__toggle-btn {
+  display: block;
+  padding: 14px 18px;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+  background-color: var(--color-white);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.enrollment__toggle input:checked + .enrollment__toggle-btn {
+  background-color: var(--color-secondary-translucent);
+  color: var(--color-secondary);
+}
+
+.enrollment__toggle-btn:hover {
+  background-color: var(--color-neutral);
+}
+
+.enrollment__toggle input:checked + .enrollment__toggle-btn:hover {
+  background-color: var(--color-secondary-translucent);
+}
+
 @media (max-width: 640px) {
   .enrollment {
     padding: 48px 0;

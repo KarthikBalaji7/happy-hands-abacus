@@ -85,7 +85,7 @@
             BOOK FREE DEMO
             <i data-lucide="arrow-right" class="hero__cta-arrow"></i>
           </a>
-          <a class="hero__cta hero__cta--outline" href="#">
+          <a class="hero__cta hero__cta--outline" href="#programs">
             VIEW PROGRAMS
             <i data-lucide="arrow-right" class="hero__cta-arrow"></i>
           </a>
@@ -263,6 +263,19 @@
         </h2>
         <p class="enrollment__subtitle">Give your child the gift of mental math. Fill in the form below and we'll get back to you shortly.</p>
         <form class="enrollment__form" id="enrollment-form">
+          <div class="enrollment__field">
+            <label class="enrollment__label">I want to</label>
+            <div class="enrollment__toggle-group">
+              <label class="enrollment__toggle">
+                <input type="radio" name="intent" value="enroll" checked />
+                <span class="enrollment__toggle-btn">Enroll</span>
+              </label>
+              <label class="enrollment__toggle">
+                <input type="radio" name="intent" value="demo" />
+                <span class="enrollment__toggle-btn">Book Free Demo</span>
+              </label>
+            </div>
+          </div>
           <div class="enrollment__field">
             <label class="enrollment__label" for="enrollment-name">Full Name</label>
             <input class="enrollment__input" type="text" id="enrollment-name" name="name" placeholder="Parent / Guardian name" required minlength="2" pattern="[A-Za-z\s\-']{2,}" title="Name must be at least 2 characters and contain only letters, spaces, hyphens, or apostrophes" />
