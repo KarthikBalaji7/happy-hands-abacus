@@ -1,8 +1,8 @@
 .navbar {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: var(--color-white-translucent-70);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--color-black-translucent-06);
   font-family: var(--font-sans);
   position: sticky;
   top: 0;
@@ -10,8 +10,13 @@
 }
 
 .navbar__logo {
-  width: 180px;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  display: block;
 }
 
 .navbar__container {

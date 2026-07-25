@@ -14,6 +14,12 @@
   --color-secondary-translucent: rgba(241, 113, 13, 0.12);
   --color-primary-translucent: rgba(2, 56, 163, 0.12);
   --color-shadow: rgba(0, 0, 0, 0.08);
+  --color-white-translucent-70: rgba(255, 255, 255, 0.7);
+  --color-white-translucent-50: rgba(255, 255, 255, 0.5);
+  --color-white-translucent-15: rgba(255, 255, 255, 0.15);
+  --color-black-translucent-06: rgba(0, 0, 0, 0.06);
+  --color-error-translucent: rgba(220, 53, 69, 0.1);
+  --color-success-translucent: rgba(40, 167, 69, 0.1);
 
   --font-size-xs: 13px;
   --font-size-sm: 15px;
@@ -84,5 +90,5 @@ h1, h2 {
 }
 
 h3, h4, h5, h6 {
-  font-size: var(--font-sans);
+  font-family: var(--font-sans);
 }
