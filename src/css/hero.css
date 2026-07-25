@@ -86,13 +86,9 @@
   height: 44px;
   border-radius: 50%;
   background-color: var(--color-primary-translucent);
-  flex-shrink: 0;
-}
-
-.hero__feature-icon svg {
-  width: 18px;
-  height: 18px;
   color: var(--color-primary);
+  font-size: 18px;
+  flex-shrink: 0;
 }
 
 .hero__feature-text {
@@ -137,13 +133,8 @@
   border-radius: 50%;
   background-color: var(--color-white);
   color: var(--color-primary);
+  font-size: 14px;
   transition: background-color 0.2s, color 0.2s;
-}
-
-.hero__cta-arrow svg {
-  width: 14px;
-  height: 14px;
-  stroke-width: 2.5;
 }
 
 .hero__cta--primary:hover {

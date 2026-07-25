@@ -76,17 +76,19 @@
   border-radius: 50%;
   background-color: var(--color-secondary-translucent);
   color: var(--color-secondary);
+  font-size: 22px;
   flex-shrink: 0;
   transition: transform 0.25s ease;
 }
 
-.programs__item--open .programs__item-icon {
-  transform: scale(1.1);
+.programs__item-icon .fa-graduation-cap,
+.programs__item-icon .fa-brain,
+.programs__item-icon .fa-trophy {
+  font-size: 18px;
 }
 
-.programs__item-icon svg {
-  width: 22px;
-  height: 22px;
+.programs__item--open .programs__item-icon {
+  transform: scale(1.1);
 }
 
 .programs__item-title {
@@ -162,11 +164,7 @@
   .programs__item-icon {
     width: 40px;
     height: 40px;
-  }
-
-  .programs__item-icon svg {
-    width: 18px;
-    height: 18px;
+    font-size: 18px;
   }
 
   .programs__item-content {

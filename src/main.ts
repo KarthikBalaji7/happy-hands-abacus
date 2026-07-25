@@ -9,7 +9,6 @@ import './css/enrollment.css'
 import './css/contact.css'
 import './css/footer.css'
 
-import './ts/icons'
 import './ts/navbar'
 import './ts/programs'
 import './ts/enrollment-select'

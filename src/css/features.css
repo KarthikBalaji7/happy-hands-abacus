@@ -67,15 +67,11 @@
   transition: transform 0.25s ease;
   background-color: var(--color-secondary-translucent);
   color: var(--color-secondary);
+  font-size: 26px;
 }
 
 .features__card:hover .features__card-icon {
   transform: scale(1.1);
-}
-
-.features__card-icon svg {
-  width: 26px;
-  height: 26px;
 }
 
 .features__card-title {

@@ -96,13 +96,9 @@
   border-radius: 50%;
   background-color: var(--color-secondary-translucent);
   color: var(--color-secondary);
+  font-size: 14px;
   pointer-events: none;
   transition: transform 0.2s ease;
-}
-
-.enrollment__select-icon svg {
-  width: 14px;
-  height: 14px;
 }
 
 .enrollment__select {
