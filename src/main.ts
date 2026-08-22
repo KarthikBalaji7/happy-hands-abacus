@@ -1,5 +1,4 @@
 import './css/style.css'
-import './css/topbar.css'
 import './css/navbar.css'
 import './css/hero.css'
 import './css/features.css'
