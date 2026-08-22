@@ -1,6 +1,7 @@
 import './css/style.css'
 import './css/navbar.css'
 import './css/hero.css'
+import './css/partners.css'
 import './css/features.css'
 import './css/about.css'
 import './css/programs.css'

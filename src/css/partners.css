@@ -1,0 +1,117 @@
+.partners {
+  position: relative;
+  font-family: var(--font-sans);
+  background: transparent;
+  padding: 96px 0;
+}
+
+.partners__container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.partners__title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.partners__title-accent {
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-tertiary));
+  border-radius: 2px;
+}
+
+.partners__subtitle {
+  margin-top: 16px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.partners__grid {
+  margin-top: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.partners__card {
+  position: relative;
+  flex: 0 1 440px;
+  padding: 40px 32px;
+  border-radius: 24px;
+  background: var(--color-white);
+  border: 1px solid var(--color-neutral);
+  box-shadow: 0 20px 40px var(--color-shadow);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.partners__card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 28px 56px var(--color-shadow);
+  border-color: var(--color-secondary);
+}
+
+.partners__card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-dark));
+  color: var(--color-white);
+  font-size: 28px;
+  box-shadow: 0 10px 20px rgba(241, 113, 13, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.partners__card--mudhalvan .partners__card-icon {
+  background: linear-gradient(135deg, var(--color-tertiary), var(--color-secondary));
+}
+
+.partners__card:hover .partners__card-icon {
+  transform: scale(1.1) rotate(-6deg);
+}
+
+.partners__card-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+}
+
+.partners__card-desc {
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 640px) {
+  .partners {
+    padding: 56px 0;
+  }
+
+  .partners__grid {
+    gap: 24px;
+  }
+
+  .partners__card {
+    flex-basis: 100%;
+    padding: 32px 24px;
+  }
+}
