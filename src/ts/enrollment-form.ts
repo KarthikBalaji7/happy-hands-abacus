@@ -9,7 +9,7 @@ const intentRadios = form?.querySelectorAll('input[name="intent"]') as NodeListO
 function updateSubmitText() {
   if (!submitBtn || !intentRadios) return
   const checked = form?.querySelector('input[name="intent"]:checked') as HTMLInputElement | null
-  submitBtn.textContent = checked?.value === 'demo' ? 'Book Free Demo' : 'Submit Application'
+  submitBtn.textContent = checked?.value === 'demo' ? 'Enquire' : 'Submit Application'
 }
 
 intentRadios?.forEach(radio => radio.addEventListener('change', updateSubmitText))
