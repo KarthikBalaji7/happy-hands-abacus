@@ -1,13 +1,38 @@
 .features {
+  position: relative;
   font-family: var(--font-sans);
   background-color: var(--color-white);
   padding: 80px 0;
 }
 
 .features__container {
+  position: relative;
+  z-index: 2;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
+  text-align: center;
+}
+
+.features__layout {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.features__art {
+  flex: 0 0 40%;
+  pointer-events: none;
+}
+
+.features__art-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.features__content {
+  flex: 1;
   text-align: center;
 }
 
@@ -39,35 +64,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px;
+  gap: 40px 48px;
 }
 
 .features__card {
-  flex: 0 1 340px;
-  padding: 32px 24px;
-  border-radius: 12px;
-  background-color: var(--color-secondary-tint);
-  border: 1px solid var(--color-neutral);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.features__card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px var(--color-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 200px;
 }
 
 .features__card-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  margin-bottom: 20px;
   transition: transform 0.25s ease;
   background-color: var(--color-secondary-translucent);
   color: var(--color-secondary);
-  font-size: 26px;
+  font-size: 30px;
 }
 
 .features__card:hover .features__card-icon {
@@ -75,16 +93,21 @@
 }
 
 .features__card-title {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary-dark);
-  margin-bottom: 8px;
+  text-align: center;
 }
 
-.features__card-desc {
-  font-size: var(--font-size-sm);
-  line-height: 1.6;
-  color: var(--color-text-muted);
+@media (max-width: 1024px) {
+  .features__layout {
+    flex-direction: column;
+  }
+
+  .features__art {
+    flex-basis: auto;
+    max-width: 480px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -92,11 +115,11 @@
     padding: 48px 0;
   }
 
-  .features__grid {
-    gap: 24px;
+  .features__layout {
+    gap: 32px;
   }
 
-  .features__card {
-    flex-basis: 100%;
+  .features__grid {
+    gap: 24px;
   }
 }
