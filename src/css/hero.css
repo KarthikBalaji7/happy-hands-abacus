@@ -138,13 +138,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background-color: var(--color-white);
-  color: var(--color-primary);
-  font-size: 14px;
-  transition: background-color 0.2s, color 0.2s;
+  font-size: 15px;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.hero__cta:hover .hero__cta-arrow {
+  transform: translateX(4px);
 }
 
 .hero__cta--primary:hover {
@@ -156,18 +156,8 @@
   color: var(--color-secondary);
 }
 
-.hero__cta--outline .hero__cta-arrow {
-  background-color: transparent;
-  color: var(--color-secondary);
-}
-
 .hero__cta--outline:hover {
   background-color: var(--color-secondary);
-  color: var(--color-white);
-}
-
-.hero__cta--outline:hover .hero__cta-arrow {
-  background-color: transparent;
   color: var(--color-white);
 }
 
