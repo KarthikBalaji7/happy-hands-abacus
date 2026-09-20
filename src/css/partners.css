@@ -1,6 +1,7 @@
 .partners {
+  position: relative;
   font-family: var(--font-sans);
-  background: transparent;
+  background-color: var(--color-neutral);
   padding: 96px 0;
 }
 
