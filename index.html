@@ -66,6 +66,121 @@
       </div>
     </nav>
     <section class="hero" id="hero">
+      <div class="hero__bg-math" aria-hidden="true">
+        <!-- Math coordinate grid with soft dots and radial mask -->
+        <svg class="hero__bg-grid" width="100%" height="100%" aria-hidden="true">
+          <defs>
+            <pattern id="hero-math-pattern" width="48" height="48" patternUnits="userSpaceOnUse">
+              <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(2, 56, 163, 0.02)" stroke-width="1" />
+              <circle cx="48" cy="0" r="1.2" fill="rgba(2, 56, 163, 0.035)" />
+              <circle cx="0" cy="48" r="1.2" fill="rgba(2, 56, 163, 0.035)" />
+              <path d="M 22 24 L 26 24 M 24 22 L 24 26" stroke="rgba(241, 113, 13, 0.025)" stroke-width="1" />
+            </pattern>
+            <radialGradient id="hero-grid-mask-grad" cx="35%" cy="45%" r="65%">
+              <stop offset="0%" stop-color="#fff" stop-opacity="1" />
+              <stop offset="70%" stop-color="#fff" stop-opacity="0.75" />
+              <stop offset="100%" stop-color="#fff" stop-opacity="0.1" />
+            </radialGradient>
+            <mask id="hero-grid-mask">
+              <rect width="100%" height="100%" fill="url(#hero-grid-mask-grad)" />
+            </mask>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hero-math-pattern)" mask="url(#hero-grid-mask)" />
+        </svg>
+
+        <!-- Subtle Abacus Watermark (Lower-Left / Background) -->
+        <svg class="hero__abacus-watermark" viewBox="0 0 340 200" fill="none">
+          <!-- Outer Frame -->
+          <rect x="8" y="8" width="324" height="184" rx="14" stroke="var(--color-primary)" stroke-width="3" stroke-opacity="0.1" />
+          <!-- Reckoning Beam -->
+          <line x1="8" y1="65" x2="332" y2="65" stroke="var(--color-primary)" stroke-width="4.5" stroke-opacity="0.13" stroke-linecap="round" />
+          <!-- Reckoning Unit Dots -->
+          <circle cx="106" cy="65" r="2.5" fill="var(--color-secondary)" fill-opacity="0.35" />
+          <circle cx="234" cy="65" r="2.5" fill="var(--color-secondary)" fill-opacity="0.35" />
+          
+          <!-- Rod 1 -->
+          <line x1="42" y1="10" x2="42" y2="190" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.08" />
+          <!-- Rod 1 upper bead (up) -->
+          <polygon points="42,24 56,33 42,42 28,33" fill="var(--color-secondary)" fill-opacity="0.12" stroke="var(--color-secondary)" stroke-width="1.2" stroke-opacity="0.18" stroke-linejoin="round" />
+          <!-- Rod 1 lower beads -->
+          <polygon points="42,88 56,97 42,106 28,97" fill="var(--color-primary)" fill-opacity="0.1" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.16" stroke-linejoin="round" />
+          <polygon points="42,110 56,119 42,128 28,119" fill="var(--color-primary)" fill-opacity="0.1" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.16" stroke-linejoin="round" />
+          <polygon points="42,132 56,141 42,150 28,141" fill="var(--color-primary)" fill-opacity="0.1" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.16" stroke-linejoin="round" />
+          <polygon points="42,154 56,163 42,172 28,163" fill="var(--color-primary)" fill-opacity="0.1" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.16" stroke-linejoin="round" />
+
+          <!-- Rod 2 -->
+          <line x1="106" y1="10" x2="106" y2="190" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.08" />
+          <!-- Rod 2 upper bead (down, touching beam = 5) -->
+          <polygon points="106,45 120,54 106,63 92,54" fill="var(--color-secondary)" fill-opacity="0.18" stroke="var(--color-secondary)" stroke-width="1.2" stroke-opacity="0.25" stroke-linejoin="round" />
+          <!-- Rod 2 lower beads (2 active touching beam = 5+2=7) -->
+          <polygon points="106,67 120,76 106,85 92,76" fill="var(--color-primary)" fill-opacity="0.15" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.22" stroke-linejoin="round" />
+          <polygon points="106,89 120,98 106,107 92,98" fill="var(--color-primary)" fill-opacity="0.15" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.22" stroke-linejoin="round" />
+          <polygon points="106,132 120,141 106,150 92,141" fill="var(--color-primary)" fill-opacity="0.09" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.14" stroke-linejoin="round" />
+          <polygon points="106,154 120,163 106,172 92,163" fill="var(--color-primary)" fill-opacity="0.09" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.14" stroke-linejoin="round" />
+
+          <!-- Rod 3 -->
+          <line x1="170" y1="10" x2="170" y2="190" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.08" />
+          <!-- Rod 3 upper bead -->
+          <polygon points="170,24 184,33 170,42 156,33" fill="var(--color-secondary)" fill-opacity="0.12" stroke="var(--color-secondary)" stroke-width="1.2" stroke-opacity="0.18" stroke-linejoin="round" />
+          <!-- Rod 3 lower beads (3 active = 3) -->
+          <polygon points="170,67 184,76 170,85 156,76" fill="var(--color-primary)" fill-opacity="0.15" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.22" stroke-linejoin="round" />
+          <polygon points="170,89 184,98 170,107 156,98" fill="var(--color-primary)" fill-opacity="0.15" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.22" stroke-linejoin="round" />
+          <polygon points="170,111 184,120 170,129 156,120" fill="var(--color-primary)" fill-opacity="0.15" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.22" stroke-linejoin="round" />
+          <polygon points="170,154 184,163 170,172 156,163" fill="var(--color-primary)" fill-opacity="0.09" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.14" stroke-linejoin="round" />
+
+          <!-- Rod 4 -->
+          <line x1="234" y1="10" x2="234" y2="190" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.08" />
+          <!-- Rod 4 upper bead (active = 5) -->
+          <polygon points="234,45 248,54 234,63 220,54" fill="var(--color-secondary)" fill-opacity="0.18" stroke="var(--color-secondary)" stroke-width="1.2" stroke-opacity="0.25" stroke-linejoin="round" />
+          <polygon points="234,67 248,76 234,85 220,76" fill="var(--color-primary)" fill-opacity="0.15" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.22" stroke-linejoin="round" />
+          <polygon points="234,111 248,120 234,129 220,120" fill="var(--color-primary)" fill-opacity="0.09" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.14" stroke-linejoin="round" />
+          <polygon points="234,133 248,142 234,151 220,142" fill="var(--color-primary)" fill-opacity="0.09" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.14" stroke-linejoin="round" />
+          <polygon points="234,155 248,164 234,173 220,164" fill="var(--color-primary)" fill-opacity="0.09" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.14" stroke-linejoin="round" />
+
+          <!-- Rod 5 -->
+          <line x1="298" y1="10" x2="298" y2="190" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.08" />
+          <polygon points="298,24 312,33 298,42 284,33" fill="var(--color-secondary)" fill-opacity="0.12" stroke="var(--color-secondary)" stroke-width="1.2" stroke-opacity="0.18" stroke-linejoin="round" />
+          <polygon points="298,89 312,98 298,107 284,98" fill="var(--color-primary)" fill-opacity="0.09" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.14" stroke-linejoin="round" />
+          <polygon points="298,111 312,120 298,129 284,120" fill="var(--color-primary)" fill-opacity="0.09" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.14" stroke-linejoin="round" />
+          <polygon points="298,133 312,142 298,151 284,142" fill="var(--color-primary)" fill-opacity="0.09" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.14" stroke-linejoin="round" />
+          <polygon points="298,155 312,164 298,173 284,164" fill="var(--color-primary)" fill-opacity="0.09" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.14" stroke-linejoin="round" />
+        </svg>
+
+        <!-- Floating Math & Abacus Elements -->
+        <span class="hero__math-item hero__math-item--plus-1" aria-hidden="true">+</span>
+        <span class="hero__math-item hero__math-item--times" aria-hidden="true">×</span>
+        <span class="hero__math-item hero__math-item--divide" aria-hidden="true">÷</span>
+        <span class="hero__math-item hero__math-item--minus" aria-hidden="true">−</span>
+        <span class="hero__math-item hero__math-item--equals" aria-hidden="true">=</span>
+        <span class="hero__math-item hero__math-item--sqrt" aria-hidden="true">√</span>
+        <span class="hero__math-item hero__math-item--percent" aria-hidden="true">%</span>
+        <span class="hero__math-item hero__math-item--num1" aria-hidden="true">1</span>
+        <span class="hero__math-item hero__math-item--num2" aria-hidden="true">2</span>
+        <span class="hero__math-item hero__math-item--num3" aria-hidden="true">3</span>
+        <span class="hero__math-item hero__math-item--pi" aria-hidden="true">π</span>
+        <span class="hero__math-item hero__math-item--infinity" aria-hidden="true">∞</span>
+
+        <div class="hero__math-item hero__math-item--bead-orange" aria-hidden="true">
+          <svg viewBox="0 0 36 22" fill="none">
+            <line x1="18" y1="0" x2="18" y2="22" stroke="var(--color-primary)" stroke-width="2" stroke-opacity="0.25" />
+            <polygon points="18,2 34,11 18,20 2,11" fill="var(--color-secondary)" fill-opacity="0.22" stroke="var(--color-secondary)" stroke-width="1.5" stroke-opacity="0.45" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="hero__math-item hero__math-item--bead-blue" aria-hidden="true">
+          <svg viewBox="0 0 36 22" fill="none">
+            <line x1="18" y1="0" x2="18" y2="22" stroke="var(--color-secondary)" stroke-width="2" stroke-opacity="0.25" />
+            <polygon points="18,2 34,11 18,20 2,11" fill="var(--color-primary)" fill-opacity="0.2" stroke="var(--color-primary)" stroke-width="1.5" stroke-opacity="0.4" stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="hero__math-item hero__math-item--bead-small" aria-hidden="true">
+          <svg viewBox="0 0 28 18" fill="none">
+            <line x1="14" y1="0" x2="14" y2="18" stroke="var(--color-primary)" stroke-width="1.5" stroke-opacity="0.2" />
+            <polygon points="14,2 26,9 14,16 2,9" fill="var(--color-secondary)" fill-opacity="0.2" stroke="var(--color-secondary)" stroke-width="1.2" stroke-opacity="0.35" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
       <div class="hero__container">
         <h1 class="hero__title">
           Building Strong Minds <br />
