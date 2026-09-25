@@ -82,10 +82,8 @@
   transition: transform 0.25s ease;
 }
 
-.programs__item-icon .fa-graduation-cap,
-.programs__item-icon .fa-brain,
-.programs__item-icon .fa-trophy {
-  font-size: 18px;
+.programs__item-icon i {
+  font-size: 20px;
 }
 
 .programs__item--open .programs__item-icon {

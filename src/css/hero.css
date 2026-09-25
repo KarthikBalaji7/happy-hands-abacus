@@ -17,7 +17,7 @@
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
 }
 
 .hero__content {
@@ -28,17 +28,18 @@
 .hero__visual {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
   min-height: 480px;
+  margin-right: -40px;
 }
 
 .hero__image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 540px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-end;
 }
 
@@ -48,7 +49,7 @@
   bottom: 6px;
   left: 50%;
   transform: translateX(-50%);
-  width: 65%;
+  width: 75%;
   height: 18px;
   background: radial-gradient(ellipse at center, rgba(2, 56, 163, 0.22) 0%, rgba(2, 56, 163, 0) 70%);
   border-radius: 50%;
@@ -58,7 +59,7 @@
 
 .hero__image {
   width: 100%;
-  max-width: 420px;
+  max-width: 500px;
   height: auto;
   max-height: 560px;
   object-fit: contain;
@@ -111,7 +112,7 @@
   height: clamp(130px, 13vw, 165px);
   transform: rotate(-12deg);
   pointer-events: none;
-  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
+  filter: drop-shadow(0 10px 24px rgba(2, 56, 163, 0.22));
   animation: heroStampFloat 5s ease-in-out infinite alternate;
 }
 
@@ -119,8 +120,12 @@
   font-size: 15px;
   font-weight: 800;
   letter-spacing: 0.18em;
-  fill: var(--color-white);
+  fill: var(--color-primary);
   text-transform: uppercase;
+}
+
+.hero__stamp-text--white {
+  fill: var(--color-white);
 }
 
 @keyframes heroStampFloat {
@@ -157,7 +162,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px 32px;
+  gap: 20px 28px;
 }
 
 .hero__feature {
@@ -476,19 +481,29 @@
 
   .hero__visual {
     min-height: auto;
-    max-width: 380px;
+    max-width: 480px;
+    width: 100%;
     margin: 0 auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .hero__image-wrapper {
+    max-width: 480px;
+    width: 100%;
+    justify-content: center;
   }
 
   .hero__image {
-    max-width: 340px;
-    max-height: 460px;
+    max-width: 100%;
+    width: 100%;
+    max-height: none;
   }
 
   .hero__stamp {
     width: 130px;
     height: 130px;
-    top: -10px;
+    top: -15px;
     right: -10px;
   }
 
@@ -519,20 +534,29 @@
   }
 
   .hero__visual {
-    margin-top: 24px;
-    max-width: 280px;
+    margin-top: 32px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero__image-wrapper {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
   }
 
   .hero__image {
-    max-width: 260px;
-    max-height: 360px;
+    max-width: 100%;
+    width: 100%;
+    max-height: none;
   }
 
   .hero__stamp {
-    width: 110px;
-    height: 110px;
-    top: -10px;
-    right: -10px;
+    width: 115px;
+    height: 115px;
+    top: -15px;
+    right: -5px;
   }
 
   .hero__abacus-watermark {

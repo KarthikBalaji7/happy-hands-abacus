@@ -1,9 +1,13 @@
 const iconMap: Record<string, string> = {
   'person-pregnant': '<i class="fa-solid fa-person-pregnant"></i>',
-  'baby': '<i class="fa-solid fa-child-reaching"></i>',
-  'graduation-cap': '<i class="fa-solid fa-graduation-cap"></i>',
-  'brain': '<i class="fa-solid fa-brain"></i>',
+  'seedling': '<i class="fa-solid fa-seedling"></i>',
+  'person-walking': '<i class="fa-solid fa-person-walking"></i>',
+  'person-biking': '<i class="fa-solid fa-person-biking"></i>',
+  'bolt': '<i class="fa-solid fa-bolt"></i>',
+  'paper-plane': '<i class="fa-solid fa-paper-plane"></i>',
+  'compass': '<i class="fa-solid fa-compass"></i>',
   'trophy': '<i class="fa-solid fa-trophy"></i>',
+  'star': '<i class="fa-solid fa-star"></i>',
 }
 
 const select = document.getElementById('enrollment-program') as HTMLSelectElement | null
