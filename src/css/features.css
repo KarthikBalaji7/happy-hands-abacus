@@ -120,6 +120,27 @@
   }
 
   .features__grid {
-    gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 16px;
+    margin-top: 36px;
+  }
+
+  .features__card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .features__card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .features__card-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 26px;
   }
 }
+
