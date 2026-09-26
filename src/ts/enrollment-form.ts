@@ -1,9 +1,11 @@
 const form = document.getElementById('enrollment-form') as HTMLFormElement | null
 const nameInput = document.getElementById('enrollment-name') as HTMLInputElement | null
 const phoneInput = document.getElementById('enrollment-phone') as HTMLInputElement | null
+const emailInput = document.getElementById('enrollment-email') as HTMLInputElement | null
 const programSelect = document.getElementById('enrollment-program') as HTMLSelectElement | null
 const nameError = document.getElementById('enrollment-name-error')
 const phoneError = document.getElementById('enrollment-phone-error')
+const emailError = document.getElementById('enrollment-email-error')
 const statusBox = document.getElementById('enrollment-status') as HTMLDivElement | null
 const submitBtn = form?.querySelector('.enrollment__submit') as HTMLButtonElement | null
 const submitBtnText = submitBtn?.querySelector('.enrollment__submit-text') as HTMLSpanElement | null
@@ -34,15 +36,17 @@ function validateField(input: HTMLInputElement, errorEl: HTMLElement | null) {
     errorEl.textContent = 'This field is required'
   } else if (input.validity.tooShort) {
     errorEl.textContent = `Must be at least ${input.minLength} characters`
-  } else if (input.validity.patternMismatch) {
-    errorEl.textContent = input.title
+  } else if (input.validity.patternMismatch || input.validity.typeMismatch) {
+    errorEl.textContent = input.title || 'Please enter a valid email address'
   }
 }
 
 nameInput?.addEventListener('blur', () => validateField(nameInput, nameError))
 phoneInput?.addEventListener('blur', () => validateField(phoneInput, phoneError))
+emailInput?.addEventListener('blur', () => emailInput && validateField(emailInput, emailError))
 nameInput?.addEventListener('input', () => validateField(nameInput, nameError))
 phoneInput?.addEventListener('input', () => validateField(phoneInput, phoneError))
+emailInput?.addEventListener('input', () => emailInput && validateField(emailInput, emailError))
 
 function setStatusMessage(type: 'success' | 'error' | null, message: string = '') {
   if (!statusBox) return
@@ -77,6 +81,7 @@ form?.addEventListener('submit', async (e) => {
   if (!form.checkValidity()) {
     validateField(nameInput!, nameError)
     validateField(phoneInput!, phoneError)
+    if (emailInput) validateField(emailInput, emailError)
     form.reportValidity()
     return
   }
@@ -84,6 +89,7 @@ form?.addEventListener('submit', async (e) => {
   const payload = {
     name: nameInput?.value.trim() ?? '',
     phone: phoneInput?.value.trim() ?? '',
+    email: emailInput?.value.trim() ?? '',
     program: programSelect?.value ?? '',
     intent: (form.querySelector('input[name="intent"]:checked') as HTMLInputElement)?.value ?? 'enroll',
   }
