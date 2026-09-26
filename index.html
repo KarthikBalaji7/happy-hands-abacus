@@ -221,13 +221,17 @@
     </div>
     <div class="hero__container">
       <div class="hero__content">
+        <div class="hero__badge">
+          <i class="fa-solid fa-laptop-house hero__badge-icon"></i>
+          <span>In-Person &amp; Online Classes Available</span>
+        </div>
         <h1 class="hero__title">
           Building Strong Minds <br />
           for a <span class="hero__title-accent">Brighter Future</span>
         </h1>
         <p class="hero__description">
           Happy Hands Abacus helps children improve concentration, memory and
-          calculation skills through the world-class Abacus program.
+          calculation skills through world-class Abacus programs — available in-person in Malé and live online.
         </p>
         <ul class="hero__features">
           <li class="hero__feature">
@@ -332,7 +336,7 @@
         Programs Offered
         <span class="programs__title-accent"></span>
       </h2>
-      <p class="programs__subtitle">Structured Abacus Training for Every Age and Skill Level</p>
+      <p class="programs__subtitle">Structured Abacus Training for Every Age and Skill Level &bull; In-Person &amp; Live Online</p>
       <div class="programs__accordion">
         <div class="programs__item">
           <button class="programs__item-header" aria-expanded="false">
@@ -464,7 +468,8 @@
         Happy Hands Abacus is dedicated to nurturing young minds through the
         power of mental arithmetic. Our proven methodology combines traditional
         abacus techniques with modern teaching approaches to help children
-        develop exceptional math skills, focus, and confidence.
+        develop exceptional math skills, focus, and confidence — offered both
+        through interactive in-person sessions and flexible live online batches.
       </p>
       <div class="about__highlights">
         <div class="about__highlight">
@@ -489,7 +494,7 @@
           </div>
           <h3 class="about__highlight-title">Our Approach</h3>
           <p class="about__highlight-desc">A blend of structured curriculum, interactive activities, and personalized
-            attention ensures every child learns at their own pace.</p>
+            attention across in-person and online classrooms ensures every child learns at their own pace.</p>
         </div>
       </div>
     </div>
@@ -598,7 +603,10 @@
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
-        <button class="enrollment__submit" type="submit">Submit Application</button>
+        <div class="enrollment__status" id="enrollment-status" role="status" aria-live="polite"></div>
+        <button class="enrollment__submit" type="submit">
+          <span class="enrollment__submit-text">Submit Application</span>
+        </button>
       </form>
     </div>
   </section>

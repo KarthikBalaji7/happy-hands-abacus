@@ -137,6 +137,26 @@
   }
 }
 
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+  background-color: var(--color-primary-translucent);
+  border: 1px solid rgba(2, 56, 163, 0.15);
+  border-radius: 999px;
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+}
+
+.hero__badge-icon {
+  color: var(--color-secondary);
+  font-size: 15px;
+}
+
 .hero__title {
   font-size: clamp(36px, 5vw, 56px);
   font-weight: 800;

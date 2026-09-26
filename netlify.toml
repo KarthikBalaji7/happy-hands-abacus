@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# Optional clean API redirect for convenience
+[[redirects]]
+  from = "/api/contact"
+  to = "/.netlify/functions/contact"
+  status = 200
+
+# Optional redirect for enrollment alias
+[[redirects]]
+  from = "/api/enrollment"
+  to = "/.netlify/functions/contact"
+  status = 200
